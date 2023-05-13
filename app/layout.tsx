@@ -1,3 +1,4 @@
+import Navbar from "./components/navbar/navbar";
 import "./globals.css";
 import { Inter, Nunito } from "next/font/google";
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
