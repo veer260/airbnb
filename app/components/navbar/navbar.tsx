@@ -1,4 +1,5 @@
 // import { Container } from "postcss";
+"use client";
 
 import React from "react";
 import Container from "../Container";
