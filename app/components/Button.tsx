@@ -14,13 +14,14 @@ const Button: React.FC<ButtonProps> = ({
   label,
   outline,
   small,
-  icon,
+  icon: Icon,
   onClick,
   disabled,
 }) => {
   return (
     <button
-      className={` w-full transition rounded-lg hover:opacity-80 disabled:opacity-70 disabled:cursor-not-allowed realtive 
+      onClick={onClick}
+      className={` relative w-full transition rounded-lg hover:opacity-80 disabled:opacity-70 disabled:cursor-not-allowed realtive 
   ${outline ? "bg-white" : "bg-rose-500"}
   ${outline ? "border-black" : "border-rose-500"}
   ${outline ? "text-black" : "text-white"}
@@ -31,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
 
     `}
     >
+      {Icon && <Icon size={24} className="absolute left-4 top-3" />}
       {label}
     </button>
   );
